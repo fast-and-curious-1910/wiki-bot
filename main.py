@@ -7,6 +7,9 @@ u_i =  string.capwords(enter_input)
 lists = u_i.split()
 word = "_".join(lists)
 url = "https://en.wikipedia.org/wiki/"+word
+url_open = requests.get(url)
+soup = BeautifulSoup(url_open.content, 'html.parser')
+details = soup('table', {'class': 'infpox'})
 
 def wikibot(url):
     url_open = requests.get(url)
@@ -21,6 +24,11 @@ def wikibot(url):
                 for x,y in zip(heading,detail):
                     print("{} :: {}".format(x.text,y.text))
                     print("--------------------------")
-    for i in range(1,3):
-        print(soup,('p')[i].text)
+
+
+
+paragraphs = soup.find_all('p')
+for paragraph in paragraphs:
+    print(paragraph.text)
+    print()
 wikibot(url)
