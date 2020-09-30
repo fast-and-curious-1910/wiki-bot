@@ -1,3 +1,4 @@
+### Important : Code Has Bugs , Might Not Run
 # WikiBot
 
 Have you ever needed some data from Wikipedia very fast , but you dont have enough time to do it yourself and you start panicking. Anyone ? Ok then I guess it is only me. 
