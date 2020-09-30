@@ -4,7 +4,7 @@ import string
 
 enter_input = input("Search: ")
 u_i =  string.capwords(enter_input)
-lists = u_i.split
+lists = u_i.split()
 word = "_".join(lists)
 url = "https://en.wikipedia.org/wiki/"+word
 
