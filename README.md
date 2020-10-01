@@ -14,8 +14,7 @@ This was built using [Wikipedia's Python API](https://pypi.org/project/wikipedia
 
 You need
 
-```bash
-pip install string
+```python
 pip install wikipedia
 ```
 
@@ -23,7 +22,7 @@ pip install wikipedia
 
 ## Usage
 
-```
+```bash
 cd /d "folder"
 python main.py
 ```
@@ -34,7 +33,7 @@ replace "folder" with the folder where it is stored
 Example: 
 
 
-```
+```bash
 cd /d "E:\Coding"
 ```
 
