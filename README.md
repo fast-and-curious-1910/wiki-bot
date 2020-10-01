@@ -5,12 +5,10 @@ Have you ever needed some data from Wikipedia very fast , but you dont have enou
 This bot will do just that ! Just enter whatever you need data on and boom ! You have your data ready.
 
 
-This was built using [BeautifulSoup4](https://en.wikipedia.org/wiki/Beautiful_Soup_(HTML_parser)) and [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
-
-[PyPi](https://pypi.org/project/beautifulsoup4/) - BeautifulSoup
+This was built using [Wikipedia's Python API](https://pypi.org/project/wikipedia/)  and [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
 
 
-[PyPi](https://pypi.org/project/requests/) - Requests 
+[PyPi](https://pypi.org/project/wikipedia/) - Wikipedia
 
 ## Requirements
 
@@ -18,8 +16,7 @@ You need
 
 ```bash
 pip install string
-pip install beautifulsoup4
-pip install requests
+pip install wikipedia
 ```
 
 
@@ -45,7 +42,7 @@ cd /d "E:\Coding"
 
 ### Upcoming Features
 - Writing to a text file (Working On)
-- Removing hyperlink marks
+- Getting Pictures
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
