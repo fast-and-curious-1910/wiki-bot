@@ -1,6 +1,7 @@
 from bs4 import BeautifulSoup
 import requests
 import string
+import sys
 
 # All The Variables
 enter_input = input("Search: ")
@@ -31,6 +32,5 @@ def wikibot(url):
 
 paragraphs = soup.find_all('p')
 for paragraph in paragraphs:
-    f.write(paragraph.text)
-    f.write()
+    sys.stdout.write(paragraph.text + '\n')
 wikibot(url)
