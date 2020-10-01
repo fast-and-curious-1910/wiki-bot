@@ -1,36 +1,44 @@
-from bs4 import BeautifulSoup
-import requests
-import string
-import sys
+import wikipedia 
 
-# All The Variables
-enter_input = input("Search: ")
-f = open("data.txt", "x")
-u_i =  string.capwords(enter_input)
-lists = u_i.split()
-word = "_".join(lists)
-url = "https://en.wikipedia.org/wiki/"+word
-url_open = requests.get(url)
-soup = BeautifulSoup(url_open.content, 'html.parser')
-details = soup('table', {'class': 'infpox'})
+f = open("output_from_wikibot", "w")
+search_about = input()
+short_description = wikipedia.summary(search_about , sentences= 3)
+medium_description = wikipedia.summary(search_about, sentences=15)
+long_description = wikipedia.summary(search_about, sentences=30)
 
-def wikibot(url):
-    url_open = requests.get(url)
-    soup = BeautifulSoup(url_open.content,'html.parser')
-    details = soup('table',{'class':'infpox'})
-    for i in details:
-        h = i.find_all('tr')
-        for j in h:
-            heading = j.find_all('th')
-            detail = j.find_all('td')
-            if heading is not None and detail is not None:
-                for x,y in zip(heading,detail):
-                    f.write("{} :: {}".format(x.text,y.text))
-                    f.write("--------------------------")
+# Overall Search On Wikipedia
+result = wikipedia.search(search_about)
+pageonsearch = wikipedia.page(result[0])
+# Diffrent Content
+categories = pageonsearch.categories
+links = pageonsearch.links
+content = pageonsearch.content
+references = pageonsearch.references
+summary = pageonsearch.summary
+title = pageonsearch.title
 
 
 
-paragraphs = soup.find_all('p')
-for paragraph in paragraphs:
-    sys.stdout.write(paragraph.text + '\n')
-wikibot(url)
+
+# Writing The Result
+print("Page content:\n", content, "\n")
+print("Page title:", title, "\n")
+print("Categories:", categories, "\n")
+print("Links:", links, "\n")
+print("References:", references, "\n")
+print("Summary:", summary, "\n")
+
+
+
+
+
+
+#print(result)
+#print(short_description)
+#f.write("Page content:\n", content, "\n")
+#f.write("Page title:", title, "\n")
+#f.write("Categories:", categories, "\n")
+#f.write("Links:", links, "\n")
+#f.write("References:", references, "\n")
+#f.write("Summary:", summary, "\n")
+
