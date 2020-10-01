@@ -13,10 +13,12 @@ This was built using [Wikipedia's Python API](https://pypi.org/project/wikipedia
 
 You need:
 python, pip to install packages 
+
+
 [Tutorial On How To Install pip ](https://pip.pypa.io/en/stable/installing/)
 
 
-after you have done that run this:
+after you have done that run this in the terminal (Windows):
 ```python
 pip install wikipedia
 ```
