@@ -22,7 +22,17 @@ after you have done that run this in the terminal (Windows):
 ```python
 pip install wikipedia
 ```
+or you could 
 
+```bash
+cd /d "folder"
+pip install -r requirements.txt
+```
+replace it with folder you downloaded in like:
+```bash
+cd /d C:/Users/Downloads
+pip install -r requirements.txt
+```
 
 
 ## Usage
