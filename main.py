@@ -1,7 +1,9 @@
+# Importing the API Module . Use pip install wikipedia to download and install it.
 import wikipedia 
 
 f = open("output_from_wikibot.txt", "w")
-search_about = input()
+search_about = input() # Getting The Input
+# Lenght Of Descriptions
 short_description = wikipedia.summary(search_about , sentences= 3)
 medium_description = wikipedia.summary(search_about, sentences=15)
 long_description = wikipedia.summary(search_about, sentences=30)
@@ -27,14 +29,15 @@ print("Categories:", categories, "\n")
 print("Links:", links, "\n")
 print("References:", references, "\n")
 print("Summary:", summary, "\n")
-
-
+# Or You Can Print these : (Just remove hashtags in front of them and in put hashtags in front of "with open"  and evrything under it )
+#print(medium_description)
+#print(long_description)
+#print(short_description)
 
 
 
 
 #print(result)
-#print(short_description)
 with open("output_from_wikibot.txt", "w" , encoding='utf-8') as f:
     f.write("Page content:\n" + content + "\n")
     f.write("Page title:" + title + "\n")
