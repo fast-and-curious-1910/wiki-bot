@@ -21,12 +21,12 @@ title = pageonsearch.title
 
 
 # Writing The Result
-#print("Page content:\n", content, "\n")
-#print("Page title:", title, "\n")
-#print("Categories:", categories, "\n")
-#print("Links:", links, "\n")
-#print("References:", references, "\n")
-#print("Summary:", summary, "\n")
+print("Page content:\n", content, "\n")
+print("Page title:", title, "\n")
+print("Categories:", categories, "\n")
+print("Links:", links, "\n")
+print("References:", references, "\n")
+print("Summary:", summary, "\n")
 
 
 
