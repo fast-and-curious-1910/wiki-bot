@@ -20,16 +20,11 @@ long_description = wikipedia.summary(search_about, sentences=30)
 result = wikipedia.search(search_about)
 pageonsearch = wikipedia.page(result[0])
 # Diffrent Content
-categories = pageonsearch.categories
-links = pageonsearch.links
-content = pageonsearch.content
-references = pageonsearch.references
-summary = pageonsearch.summary
-title = pageonsearch.title
+
 
 
 # Printing The Result
-print("Page content:\n", content, "\n")
+
 print("Page title:", title, "\n")
 print("Categories:", categories, "\n")
 #print("Links:", links, "\n")
@@ -37,10 +32,14 @@ print("Categories:", categories, "\n")
 print("Summary:", summary, "\n")
 
 
-# Or You Can Print these : (Just remove hashtags in front of them and in put hashtags in front of "with open" 👇 , code obove this 👆 and evrything under it )
+# Or You Can Print/Write these : (Just remove hashtags in front of them and in put hashtags in front of "with open" 👇 , code obove this 👆 and evrything under it )
 #print(medium_description)
 #print(long_description)
 #print(short_description)
+#f.write(medium_description)
+#f.write(long_description)
+#f.write(short_description)
+
 
 
 # Writing To /output_from_wikibot.txt 
