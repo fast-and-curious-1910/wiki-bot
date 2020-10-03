@@ -18,8 +18,15 @@ long_description = wikipedia.summary(search_about, sentences=30)
 
 # Overall Search On Wikipedia
 result = wikipedia.search(search_about)
-pageonsearch = wikipedia.page(result[0])
+page= wikipedia.page(result[0])
+
 # Diffrent Content
+title = page.title
+categories = page.categories
+content = page.content
+links = page.links
+references = page.references
+summary = page.summary
 
 
 
